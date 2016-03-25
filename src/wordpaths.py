@@ -20,9 +20,10 @@ jina ­> pina ­> pint ­> pent ­> peat ­> prat ­> pray
 fike ­> fire ­> fare ­> care ­> carp ­> camp
 The program should take as input the path to the word file, a start word and an end word and
 print out at least one path from start to end, or something indicating there is no possible path if
-appropiate.
+appropriate.
 
 e.g.
+need to get this working with linux
 $ python ./wordpaths.py /usr/share/dict/words flux alem
 cat ­> cot ­> cog ­> dog
 python C:\Users\desktop1\PycharmProjects\Workday\src\wordpaths.py ../resources/test.txt cat dog
