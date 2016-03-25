@@ -1,4 +1,4 @@
-# Workday
+
 Word path game
 
 Problem - Word Paths
