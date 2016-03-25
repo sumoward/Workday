@@ -23,6 +23,7 @@ print out at least one path from start to end, or something indicating there is 
 appropriate.
 
 e.g.
+
 need to get this working with linux
 $ python ./wordpaths.py /usr/share/dict/words flux alem
 cat ­> cot ­> cog ­> dog
@@ -180,6 +181,7 @@ class WordPath:
 
 
 if __name__ == "__main__":
+    # TODO address path issue
     try:
         WordPath(sys.argv[1], sys.argv[2], sys.argv[3])
     except:
