@@ -63,45 +63,44 @@ class TestWordPath(unittest.TestCase):
         self.assertEqual(test_path.__str__() , 'cat')
 
 
-def test_create_graph(self):
-    """
-        Test that we can create a graph from a dictionary
-    """
+    def test_create_graph(self):
+        """
+            Test that we can create a graph from a dictionary
+        """
 
-    self.assertEqual(self.test_path.graph, self.expected_graph)
-
-
-def test_search_graph(self):
-    """
-       Test that we can search a graph
-    """
-    self.test_path.graph = self.expected_graph
-    self.assertEqual(self.test_path.paths, [['cat', 'cot', 'cog', 'dog']])
+        self.assertEqual(self.test_path.graph, self.expected_graph)
 
 
-def test_main(self):
-    """
-    test the expected paths are generated for the start_word and end_word
-
-    """
-    test_data = ['cat -> cot -> cog -> dog',
-                 'pint -> pent -> peat -> prat -> pray',
-                 'fire -> fare -> care -> carp -> camp']
-
-    for test in test_data:
-        seperate = test.split()
-        start_word = seperate[0]
-        end_word = seperate[-1]
-        expected = WordPath(self.path, start_word, end_word)
-        self.assertEqual(expected.__str__(), test)
-
-    # test identical start and end words
-    expected = WordPath(self.path, 'cat', 'cat')
-    self.assertEqual(expected.__str__(), 'cat')
-    # test words not in dict
-    expected = WordPath(self.path, 'xxxxx', 'yyyyy')
-    self.assertEqual(expected.__str__(), 'xxxxx')
+    def test_search_graph(self):
+        """
+           Test that we can search a graph
+        """
+        self.test_path.graph = self.expected_graph
+        self.assertEqual(self.test_path.paths, [['cat', 'cot', 'cog', 'dog']])
 
 
-if __name__ == '__main__':
-    unittest.main()
+    def test_main(self):
+        """
+        test the expected paths are generated for the start_word and end_word
+
+        """
+        test_data = ['cat -> cot -> cog -> dog',
+                     'pint -> pent -> peat -> prat -> pray',
+                     'fire -> fare -> care -> carp -> camp']
+
+        for test in test_data:
+            seperate = test.split()
+            start_word = seperate[0]
+            end_word = seperate[-1]
+            expected = WordPath(self.path, start_word, end_word)
+            self.assertEqual(expected.__str__(), test)
+
+        # test identical start and end words
+        expected = WordPath(self.path, 'cat', 'cat')
+        self.assertEqual(expected.__str__(), 'cat')
+        # test words not in dict
+        expected = WordPath(self.path, 'xxxxx', 'yyyyy')
+        self.assertEqual(expected.__str__(), 'xxxxx')
+
+
+
